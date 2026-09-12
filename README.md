@@ -1,13 +1,14 @@
 # CompSci121BubbleSort
 We be sorting with bubbles
 
-constant MAX is max length of array
+constant MAX is max length of the array
+Values should be an array
 ```
-function printValues(array):
+function printValues(Values):
     print "["
     for i from 0 to MAX - 1:
-        print array[i], followed by ","
-    print array[MAX - 1]
+        print Values[i], followed by ","
+    print Values[MAX - 1]
     print "]"
 ```
 ```
@@ -16,15 +17,17 @@ function swap(num1, num2):
     set num1 to num2
     set num2 to temp
 ```
+NumSet is an array
 ```
-function sort(array):
+function sort(NumSet):
     create integer variable KeepGoing, set to 1
     while KeepGoing > 0:
         set KeepGoing to 0
         for i from 0 to MAX - 1:
-            if array[i] > array[i+1]:
+            if NumSet[i] > NumSet[i+1]:
                 increment KeepGoing
-                swap(array[i+1], array[i])
+                swap(NumSet[i+1], NumSet[i])
+                printValues(NumSet)
 ```
 ```
 function main():
