@@ -22,6 +22,7 @@ void sort(int* NumSet){
 			if (NumSet[i] > NumSet[i+1]){
 				KeepGoing++;
 				swap(&NumSet[i+1], &NumSet[i]);
+				printValues(NumSet);
 			}
 		}	
 	}
@@ -33,7 +34,7 @@ int main(){
   printValues(values);
   printf("\n");
   sort(values);
-  printf("After: \n");
+  printf("\nAfter: \n");
   printValues(values);
 
   return(0);
